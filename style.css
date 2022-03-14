@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right , rgb(80, 162, 255) , rgb(160, 98, 241));
+}
+
+.rating {
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  color: white;
+}
+
+.rating .image i {
+  font-size: 5em;
+}
+
+.rating .rating-description {
+  margin-top: 3rem;
+}
+
+.rating .rating-description .title {
+  font-size: 2.5em;
+  color: rgb(255, 208, 0);
+}
+
+.rating .rating-description p {
+  margin: 1em 0;
+}
+
+.rating .stars i {
+  padding: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  transition:  all .3s ease;
+}
+
+
+
+.color{
+  color: yellow;
+}
