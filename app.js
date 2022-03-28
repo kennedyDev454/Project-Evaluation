@@ -5,7 +5,10 @@ evaluation.innerHTML = `<h1>Waiting...</h1>`
 
 const StarExperience = index1 => {
   stars.forEach((__, index2) => {
-    if (index1 >= index2) {
+
+    const isInSelectedRange = index1 >= index2
+
+    if (isInSelectedRange) {
       stars[index2].classList.add("color");
     } else {
       stars[index2].classList.remove("color");
@@ -16,12 +19,6 @@ const StarExperience = index1 => {
   verifyRating(totalEvaluation)
 };
 
-stars.forEach((star, index) => {
-  star.addEventListener("click", () => {
-    StarExperience(index);
-  });
-});
-
 const verifyRating = totalEvaluation =>{
   if(totalEvaluation >= 0 && totalEvaluation <=2){
     evaluation.innerHTML = `<i class='bx bxs-sad'></i>`
@@ -31,3 +28,11 @@ const verifyRating = totalEvaluation =>{
     evaluation.innerHTML = `<i class='bx bxs-happy-heart-eyes'></i>`
   }
 }
+
+
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    StarExperience(index);
+  });
+});
+
